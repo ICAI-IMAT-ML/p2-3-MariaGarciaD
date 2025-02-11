@@ -64,8 +64,6 @@ class LinearRegressor:
         
         beta = np.linalg.inv(X_transpose @ X) @ X_transpose @ y
 
-        beta = np.dot(np.dot(np.linalg.inv(np.dot(X_transpose, X)), X_transpose), y)
-
         # Separate the intercept and the coefficients
         self.intercept = beta[0]
         self.coefficients = beta[1:]
